@@ -78,7 +78,46 @@ s.slice(2, 6)     // "Hola"
 s.replace("Mundo", "JS") // "  Hola JS  "
 s.split(" ")      // ["", "", "Hola", "Mundo", "", ""]
 s.repeat(3)       // "  Hola Mundo    Hola Mundo    Hola Mundo  "` },
+      { tipo: 'subtitulo', v: '¿Para qué sirve cada uno?' },
+      { tipo: 'lista', v: [
+        '<code>.trim()</code> — Saca espacios invisibles del principio y final. Lo usás SIEMPRE que recibís texto de un usuario o archivo. Ej: usuario escribe <code>"  ana@gmail.com  "</code> en un login → sin trim el server busca el email con espacios y falla. Con trim queda <code>"ana@gmail.com"</code> y funciona. Es la causa #1 de bugs boludos.',
+        '<code>.includes()</code> — Para saber si un texto contiene algo. Ej: verificar que un email tenga <code>@</code>, o si un artículo contiene una palabra prohibida.',
+        '<code>.toUpperCase() / .toLowerCase()</code> — Para comparar strings sin importar mayúsculas. Ej: <code>"Hola".toLowerCase() === "hola".toLowerCase()</code> da true.',
+        '<code>.split()</code> — Convierte un string en array. Ej: <code>"Juan,María,Pedro".split(",")</code> → <code>["Juan","María","Pedro"]</code>. O separar una oración en palabras.',
+        '<code>.replace()</code> — Para cambiar partes de un texto. Ej: sanitizar inputs, reemplazar palabras.',
+        '<code>.slice()</code> — Para extraer pedazos. Ej: obtener los primeros 3 caracteres de un código.',
+        '<code>.repeat()</code> — Rellenar líneas, máscaras, separadores visuales.',
+        '<code>.indexOf()</code> — Saber en qué posición está algo. Ej: si devuelve <code>-1</code> es que no existe.',
+        '<code>.startsWith() / .endsWith()</code> — Validar formatos. Ej: si un archivo termina en <code>.jpg</code> o una URL empieza con <code>https</code>.',
+      ] },
       { tipo: 'texto', v: 'Estos métodos <strong>no modifican</strong> el string original (los strings son inmutables en JS), siempre devuelven uno nuevo.' },
+      { tipo: 'subtitulo', v: 'Posiciones [ ] — agarrar una letra específica' },
+      { tipo: 'codigo', v: `const s = "HOLA"
+//       0123
+s[0]  // "H"  (primera letra, posición 0)
+s[1]  // "O"  (segunda)
+s[2]  // "L"
+s[3]  // "A"
+
+// Combinar con métodos:
+const nombre = "juan"
+nombre[0].toUpperCase()  // "J"` },
+      { tipo: 'subtitulo', v: 'slice(inicio, cantidad) — cortar un pedazo' },
+      { tipo: 'codigo', v: `// slice(desde, cuántos tomar)
+const texto = "javascript"
+texto.slice(0, 4)   // "java"  (desde 0, tomar 4)
+texto.slice(0, 3)   // "jav"   (desde 0, tomar 3)
+texto.slice(4, 4)   // "scri"  (desde 4, tomar 4)
+
+// slice(desde) un solo número = desde ahí hasta el final
+texto.slice(4)      // "script" (desde 4 hasta el final)
+texto.slice(1)      // "avascript" (desde 1 hasta el final)
+
+// Ejemplo práctico: separar primera letra del resto
+const apellido = "PEREZ"
+apellido[0]         // "P"       (primera letra, con [ ])
+apellido.slice(1)   // "EREZ"    (el resto, con slice)
+apellido[0] + apellido.slice(1).toLowerCase()  // "Perez"` },
       { tipo: 'subtitulo', v: 'Template literals avanzados' },
       { tipo: 'codigo', v: `// Strings multilínea
 const parrafo = \`Esto es
@@ -94,7 +133,7 @@ function saludar(nombre) {
   return \`¡Hola \${nombre}!\`
 }` },
       { tipo: 'destacado', v: '<strong>💡</strong> Podés poner cualquier expresión dentro de <code>${}</code>: operaciones aritméticas, ternarios, llamadas a funciones, etc.' },
-      { tipo: 'ejercicio', v: 'Abrí dia-02-strings/ejercicio.js. Creá la función formatNombre, validarEmail y el contador de palabras.' },
+      { tipo: 'ejercicio', v: 'Abrí dia-02-strings/ejercicio.js. Usá variables, console.log y métodos de string para manipular textos. No necesitás funciones todavía (eso es del día 7).' },
     ]
   },
   {

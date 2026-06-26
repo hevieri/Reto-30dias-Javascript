@@ -9,7 +9,7 @@ Reto práctico para aprender JavaScript desde cero en 30 días. Un concepto por 
 | Día | Tema | Ejercicio |
 |-----|------|-----------|
 | **1** | Variables (`let`, `const`), tipos de datos, `console.log` | Declarar variables de cada tipo y mostrarlas en consola |
-| **2** | Strings, template literals, métodos de string | Crear función que formatee nombres (mayúsculas, recorte, template) |
+| **2** | Strings, template literals, métodos de string | Manipular textos con métodos de string, template literals y console.log |
 | **3** | Numbers, operadores, `Math` | Calculadora de propina + conversor °C ↔ °F |
 | **4** | Condicionales: `if`, `else`, `switch`, ternario | Juego de adivinar número + validador de contraseñas |
 | **5** | Arrays: creación, índices, métodos básicos (`push`, `pop`, `shift`, `unshift`, `includes`, `indexOf`) | Lista de compras: agregar/eliminar/buscar items |

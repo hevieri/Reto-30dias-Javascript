@@ -20,3 +20,33 @@
 */
 
 // --- Escribí tu código acá ---
+
+//1- 
+let a = 15;
+let b = 4;
+
+console.log(a + b);
+console.log(a - b);
+console.log(a*b);
+console.log(a/b);
+console.log(a%b);
+console.log(a**b);
+
+//2.
+const numero = 4.7 
+console.log(Math.round(numero));
+console.log(Math.ceil(numero));
+console.log(Math.floor(numero));
+console.log(Math.trunc(numero));
+
+const decimal = 3.14159
+console.log(decimal.toFixed(2));
+
+//3.
+// Math.random() da 0-0.999... → *6 da 0-5.999... → floor redondea abajo (0-5) → +1 = 1-6
+console.log(Math.random())
+console.log(Math.floor(Math.random() * 6) + 1)
+
+//4.
+console.log(Math.max(10, 25, 3, 18, 7));
+console.log(Math.min(10, 25, 3, 18, 7));
